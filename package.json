@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/infomationsecurity119/hackerton2018_emergency_car/issues"
   },
-  "homepage": "https://github.com/infomationsecurity119/hackerton2018_emergency_car#readme"
+  "homepage": "https://github.com/infomationsecurity119/hackerton2018_emergency_car#readme",
+  "dependencies": {
+    "composer-client": "^0.19.7",
+    "pi-pins": "^1.0.2"
+  }
 }
