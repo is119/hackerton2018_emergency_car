@@ -1,0 +1,19 @@
+{
+  "name": "hackerton2018_emergency_car",
+  "version": "1.0.0",
+  "description": "controlls car",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/infomationsecurity119/hackerton2018_emergency_car.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infomationsecurity119/hackerton2018_emergency_car/issues"
+  },
+  "homepage": "https://github.com/infomationsecurity119/hackerton2018_emergency_car#readme"
+}
