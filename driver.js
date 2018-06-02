@@ -14,7 +14,7 @@ exports.init = function(server){
     server.get('/drive', function (req, res) {
         pin1.value(true);
         pin3.value(true);
-        setTimeout(function() { pin3.value(false); pin1.value(false); }, 2000);
+        setTimeout(function() { pin3.value(false); pin1.value(false); }, 3000);
         res.send("Hello World!\n");
     });
     server.get('/space', function (req, res) {
