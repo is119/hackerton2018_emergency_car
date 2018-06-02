@@ -9,3 +9,11 @@ pin3.mode('out')
 pin4.mode('out')
 
 //todo : 자동차 만들기
+
+exports.init = function(server){
+    server.get('/', function (req, res) {
+        msg = `${button1.value(),button2.value(),button3.value(),button4.value()}`
+        res.send("Hello World!");
+    });
+    return server
+}

@@ -18,6 +18,7 @@
   "homepage": "https://github.com/infomationsecurity119/hackerton2018_emergency_car#readme",
   "dependencies": {
     "composer-client": "^0.19.7",
+    "express": "^4.16.3",
     "pi-pins": "^1.0.2"
   }
 }
