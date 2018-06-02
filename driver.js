@@ -16,6 +16,7 @@ exports.init = function(server){
         pin3.value(true);
         setTimeout(function() { pin3.value(false); pin1.value(false); }, 2000);
         res.send("Hello World!\n");
+        res.end();
     });
     server.get('/space', function (req, res) {
         pin1.value(true);
@@ -24,26 +25,31 @@ exports.init = function(server){
         pin4.value(true);
         
         res.send("All stop!\n");
+        res.end();
     });
     server.get('/left', function (req, res) {
         pin1.value(false);
         //pin3.value(true);
         res.send("Left on\n");
+        res.end();
     });
     server.get('/right', function (req, res) {
         //pin1.value(true);
         pin3.value(false);
         res.send("right on\n");
+        res.end();
     });
     server.get('/up', function (req, res) {
         pin1.value(false);
         pin3.value(false);
         res.send("Up on\n");
+        res.end();
     });
     server.get('/down', function (req, res) {
         pin2.value(false);
         pin4.value(false);
         res.send("Down on\n");
+        res.end();
     });
     return server
 }
