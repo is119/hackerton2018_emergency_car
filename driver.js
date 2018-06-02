@@ -15,7 +15,7 @@ exports.init = function(server){
         pin1.value(true);
         pin3.value(true);
         setTimeout(function() { pin3.value(false); pin1.value(false); }, 2000);
-        res.send("Hello World\n!");
+        res.send("Hello World!\n");
     });
     return server
 }
