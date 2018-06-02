@@ -23,6 +23,7 @@ async function main(){
 exports.init = function(server){
     server.get('/call', function (req, res) { // Recv from Driver
         http.request("http://localhost:7777/drive");
+        res.send("Hello World\n!");
     });
     return server
 }
