@@ -12,10 +12,9 @@ pin4.mode('out')
 
 exports.init = function(server){
     server.get('/drive', function (req, res) {
-        pin1.value(false);
-        pin3.value(false);
-        setTimeout(pin1.value(true), 2000);
-        setTimeout(pin3.value(true), 2000);
+        pin1.value(true);
+        pin3.value(true);
+        setTimeout(function() { pin3.value(false); pin1.value(false); }, 2000);
         res.send("Hello World!");
     });
     return server
