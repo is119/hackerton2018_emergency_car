@@ -1,11 +1,15 @@
-const readline = require('readline');
-
-readline.emitKeypressEvents(process.stdin);
+var keypress = require('keypress');
+ 
+// make `process.stdin` begin emitting "keypress" events
+keypress(process.stdin);
+ 
+// listen for the "keypress" event
+process.stdin.on('keypress', function (ch, key) {
+  console.log('got "keypress"', key);
+  if (key && key.ctrl && key.name == 'c') {
+    process.stdin.pause();
+  }
+});
+ 
 process.stdin.setRawMode(true);
-
-process.stdin.on('keypress', (str, key) => {
-  console.log(str)
-  console.log(key)
-  if(str == "left")
-    process.stdin.setRawMode(false);
-})
+process.stdin.resume();
