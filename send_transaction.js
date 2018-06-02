@@ -21,9 +21,9 @@ async function main(){
     factory = definition.getFactory();
 
     let transaction = factory.newTransaction('org.hackerton','requestEmergencyCar')
-    let patient = factory.newRelationship('org.hackerton', 'Requester','1');
+    let requester = factory.newRelationship('org.hackerton', 'Requester','1');
     let patient = factory.newRelationship('org.hackerton', 'Patient','1');
-    
+    transaction.requester= requester;
     transaction.patient = patient;
     transaction.x = 1.0;
     transaction.y = 1.0;
