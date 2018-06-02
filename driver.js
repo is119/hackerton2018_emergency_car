@@ -22,10 +22,10 @@ exports.init = function(server){
 
 exports.init = function(server){
     server.get('/space', function (req, res) {
-        pin1.value(true);
-        pin2.value(true);
-        pin3.value(true);
-        pin4.value(true);
+        pin1.value(false);
+        pin2.value(false);
+        pin3.value(false);
+        pin4.value(false);
         
         res.send("All stop!\n");
     });
