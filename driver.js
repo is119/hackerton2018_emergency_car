@@ -17,10 +17,6 @@ exports.init = function(server){
         setTimeout(function() { pin3.value(false); pin1.value(false); }, 2000);
         res.send("Hello World!\n");
     });
-    return server
-}
-
-exports.init = function(server){
     server.get('/space', function (req, res) {
         pin1.value(true);
         pin2.value(true);
@@ -29,38 +25,21 @@ exports.init = function(server){
         
         res.send("All stop!\n");
     });
-    return server
-}
-
-
-exports.init = function(server){
     server.get('/left', function (req, res) {
         pin1.value(false);
         //pin3.value(true);
         res.send("Left on\n");
     });
-    return server
-}
-
-exports.init = function(server){
     server.get('/right', function (req, res) {
         //pin1.value(true);
         pin3.value(false);
         res.send("right on\n");
     });
-    return server
-}
-
-exports.init = function(server){
     server.get('/up', function (req, res) {
         pin1.value(false);
         pin3.value(false);
         res.send("Up on\n");
     });
-    return server
-}
-
-exports.init = function(server){
     server.get('/down', function (req, res) {
         pin2.value(false);
         pin4.value(false);
