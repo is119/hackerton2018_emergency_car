@@ -1,4 +1,4 @@
-var keypress = require('keypress');
+var keypress = require('readline');
  
 // make `process.stdin` begin emitting "keypress" events
 keypress(process.stdin);
