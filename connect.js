@@ -22,6 +22,8 @@ async function main(){
 }
 exports.init = function(server){
     server.get('/drive', function (req, res) { // Recv from Driver
+       console.log("RECV : Event omitted!") // ++
+       http.request("localhost:7777/drive");  // ++
     });
     return server
 }
