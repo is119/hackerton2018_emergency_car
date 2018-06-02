@@ -3,7 +3,7 @@ let http = require('http');
 
 readline.emitKeypressEvents(process.stdin);
 process.stdin.setRawMode(true);
- 
+ /*
 // listen for the "keypress" event
 process.stdin.on('keypress', function (ch, key) {
   console.log('got "keypress"', key);
@@ -23,7 +23,7 @@ process.stdin.on('keypress', function (ch, key) {
     http.get("http://localhost:7777/down");
   }
 });
-
+*/
 process.stdin.on('keyup', function (ch, key) {
   console.log('got "keyup"', key);
   if (key && key.ctrl && key.name == 'c') {
@@ -31,7 +31,7 @@ process.stdin.on('keyup', function (ch, key) {
   }
   if (key && key.name == 'left') {
     http.get("http://localhost:7777/left_up");
-  }
+  }/*
  if (key && key.name == 'right') {
     http.get("http://localhost:7777/right_up");
   }
@@ -40,7 +40,7 @@ process.stdin.on('keyup', function (ch, key) {
   }
  if (key && key.name == 'down') {
     http.get("http://localhost:7777/down_up");
-  }
+  }*/
 });
 
 process.stdin.setRawMode(true);
