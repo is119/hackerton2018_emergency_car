@@ -13,7 +13,7 @@ main()
 connection.on('event',(event)=>{
     if(event.$type == 'EmergencyCarOccupied' && event.car.$identifier == "1"){
        console.log("RECV : Event omitted!")
-       http.get("localhost:7777/drive"); 
+       http.get("http://localhost:7777/drive"); 
     }
 })
 async function main(){
