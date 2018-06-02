@@ -19,3 +19,52 @@ exports.init = function(server){
     });
     return server
 }
+
+exports.init = function(server){
+    server.get('/space', function (req, res) {
+        pin1.value(true);
+        pin2.value(true);
+        pin3.value(true);
+        pin4.value(true);
+        
+        res.send("All stop!\n");
+    });
+    return server
+}
+
+
+exports.init = function(server){
+    server.get('/left', function (req, res) {
+        pin1.value(true);
+        //pin3.value(true);
+        res.send("Left on\n");
+    });
+    return server
+}
+
+exports.init = function(server){
+    server.get('/right', function (req, res) {
+        //pin1.value(true);
+        pin3.value(true);
+        res.send("right on\n");
+    });
+    return server
+}
+
+exports.init = function(server){
+    server.get('/up', function (req, res) {
+        pin1.value(true);
+        pin3.value(true);
+        res.send("Up on\n");
+    });
+    return server
+}
+
+exports.init = function(server){
+    server.get('/down', function (req, res) {
+        pin2.value(true);
+        pin4.value(true);
+        res.send("Down on\n");
+    });
+    return server
+}
