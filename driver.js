@@ -11,7 +11,7 @@ pin4.mode('out')
 //todo : 자동차 만들기
 
 exports.init = function(server){
-    server.get('/', function (req, res) {
+    server.get('/drive', function (req, res) {
         pin1.value(false);
         pin3.value(false);
         setTimeout(pin1.value(true), 2000);
