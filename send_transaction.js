@@ -11,9 +11,9 @@ let factory = "";
 
 main()
 connection.on('event',(event)=>{
-    console.log(event)
+    //console.log(event)
     if(event.name == 'org.hackerton.EmergencyCarOccupied'){
-       console.log("Event omitted!") 
+       console.log("SEND : Event omitted!") 
     }
 })
 async function main(){

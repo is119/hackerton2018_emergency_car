@@ -13,7 +13,7 @@ main()
 connection.on('event',(event)=>{
     console.log(event)
     if(event.name == 'org.hackerton.EmergencyCarOccupied'){
-       console.log("Event omitted!") 
+       console.log("RECV : Event omitted!") 
     }
 })
 async function main(){
