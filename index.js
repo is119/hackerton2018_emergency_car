@@ -6,7 +6,6 @@ let BusinessNetworkConnection = composer.BusinessNetworkConnection;
 
 let connection = new BusinessNetworkConnection();
 let definition = "";
-let factory = definition.getFactory();
 
 businessNetworkConnection.on('event', (event) => {
     // event: { "$class": "org.namespace.BasicEvent", "eventId": "0000-0000-0000-000000#0" }
