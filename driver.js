@@ -1,3 +1,4 @@
+let http = require('http')
 var pin1 = require("pi-pins").connect(128),
     pin2 = require("pi-pins").connect(129),
     pin3 = require("pi-pins").connect(130),
@@ -14,12 +15,8 @@ exports.init = function(server){
     server.get('/drive', function (req, res) {
         pin1.value(true);
         pin3.value(true);
-        var v1 = setTimeout(function() { pin3.value(false); pin1.value(false); }, 3000);
-        var v2 = setTimeout(function() { pin2.value(true); pin4.value(true); }, 2000);
-        var v3 = setTimeout(function() { pin2.value(false); pin4.value(false); }, 3000);
+        var v1 = setTimeout(function() { http.get("http://localhost:7777/stop"); }, 3000);
         clearTimeout(v1);
-        clearTimeout(v2);
-        clearTimeout(v3);
         res.send("Hello World!\n");
     });
     server.get('/space', function (req, res) {
@@ -53,6 +50,23 @@ exports.init = function(server){
         pin4.value(true);
         res.send("Down on\n");
         res.end();
+    });
+    server.get('/back', function (req, res) {
+        pin2.value(true);
+        pin4.value(true);
+        res.send("Down on\n");
+        var v1 = setTimeout(function() { http.get("http://localhost:7777/space"); }, 3000);
+        clearTimeout(v1);
+        res.end();
+    });
+    server.get('/stop', function (req, res) {
+        pin1.value(false);
+        pin2.value(false);
+        pin3.value(false);
+        pin4.value(false);
+        var v1 = setTimeout(function() { http.get("http://localhost:7777/back"); }, 3000);
+        clearTimeout(v1);
+        res.send("All stop!\n");
     });
     return server
 }
