@@ -16,7 +16,6 @@ exports.init = function(server){
         pin3.value(true);
         setTimeout(function() { pin3.value(false); pin1.value(false); }, 2000);
         res.send("Hello World!\n");
-        res.end();
     });/*
     server.get('/space', function (req, res) {
         pin1.value(true);
