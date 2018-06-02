@@ -1,7 +1,7 @@
-var keypress = require('readline');
+var readline = require('readline');
  
-// make `process.stdin` begin emitting "keypress" events
-keypress(process.stdin);
+readline.emitKeypressEvents(process.stdin);
+process.stdin.setRawMode(true);
  
 // listen for the "keypress" event
 process.stdin.on('keypress', function (ch, key) {
