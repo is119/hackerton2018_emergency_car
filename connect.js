@@ -21,7 +21,7 @@ async function main(){
     factory = definition.getFactory();
 }
 exports.init = function(server){
-    server.get('/drive', function (req, res) { // Recv from Driver
+    server.get('/call', function (req, res) { // Recv from Driver
         http.request("http://localhost:7777/drive");
     });
     return server
