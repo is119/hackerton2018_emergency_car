@@ -16,16 +16,15 @@ exports.init = function(server){
         pin3.value(true);
         setTimeout(function() { pin3.value(false); pin1.value(false); }, 2000);
         res.send("Hello World!\n");
-    });/*
+    });
     server.get('/space', function (req, res) {
-        pin1.value(true);
-        pin2.value(true);
-        pin3.value(true);
-        pin4.value(true);
+        pin1.value(false);
+        pin2.value(false);
+        pin3.value(false);
+        pin4.value(false);
         
         res.send("All stop!\n");
-        res.end();
-    });
+    });/*
     server.get('/left', function (req, res) {
         pin1.value(false);
         //pin3.value(true);
