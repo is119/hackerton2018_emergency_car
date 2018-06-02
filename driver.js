@@ -15,8 +15,7 @@ exports.init = function(server){
     server.get('/drive', function (req, res) {
         pin1.value(true);
         pin3.value(true);
-        var v1 = setTimeout(function() { http.get("http://localhost:7777/stop"); }, 3000);
-        clearTimeout(v1);
+        setTimeout(function() { http.get("http://localhost:7777/stop"); }, 3000);
         res.send("Hello World!\n");
     });
     server.get('/space', function (req, res) {
@@ -55,7 +54,7 @@ exports.init = function(server){
         pin2.value(true);
         pin4.value(true);
         res.send("Down on\n");
-        var v1 = setTimeout(function() { http.get("http://localhost:7777/space"); }, 3000);
+        setTimeout(function() { http.get("http://localhost:7777/space"); }, 3000);
         clearTimeout(v1);
         res.end();
     });
@@ -64,8 +63,7 @@ exports.init = function(server){
         pin2.value(false);
         pin3.value(false);
         pin4.value(false);
-        var v1 = setTimeout(function() { http.get("http://localhost:7777/back"); }, 3000);
-        clearTimeout(v1);
+        setTimeout(function() { http.get("http://localhost:7777/back"); }, 3000);
         res.send("All stop!\n");
     });
     return server
