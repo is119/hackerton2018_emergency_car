@@ -1,5 +1,6 @@
 var readline = require('readline');
- 
+let http = require('http');
+
 readline.emitKeypressEvents(process.stdin);
 process.stdin.setRawMode(true);
  
@@ -10,7 +11,7 @@ process.stdin.on('keypress', function (ch, key) {
     process.stdin.pause();
   }
   if (key && key.name == 'left') {
-    process.stdin.pause();
+    http.get("http://localhost:7777/drive");
   }
 });
  
