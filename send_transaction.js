@@ -11,8 +11,7 @@ let factory = "";
 
 main()
 connection.on('event',(event)=>{
-    //console.log(event)
-    if(event.name == 'org.hackerton.EmergencyCarOccupied'){
+    if(event.$type == 'EmergencyCarOccupied' && event.car.$identifier == "1"){
        console.log("SEND : Event omitted!") 
     }
 })

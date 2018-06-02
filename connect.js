@@ -11,7 +11,7 @@ let factory = "";
 
 main()
 connection.on('event',(event)=>{
-    if(event.name == 'EmergencyCarOccupied'){
+    if(event.$type == 'EmergencyCarOccupied' && event.car.$identifier == "1"){
        console.log("RECV : Event omitted!")
        http.get("localhost:7777/drive"); 
     }
