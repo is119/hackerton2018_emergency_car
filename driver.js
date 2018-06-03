@@ -1,8 +1,8 @@
 let http = require('http')
-var pin1 = require("pi-pins").connect(128),
-    pin2 = require("pi-pins").connect(129),
-    pin3 = require("pi-pins").connect(130),
-    pin4 = require("pi-pins").connect(46)
+var pin1 = require("pi-pins").connect(129),
+    pin2 = require("pi-pins").connect(130),
+    pin3 = require("pi-pins").connect(46),
+    pin4 = require("pi-pins").connect(14)
 
 pin1.mode('out')
 pin2.mode('out')
