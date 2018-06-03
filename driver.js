@@ -55,7 +55,6 @@ exports.init = function(server){
         pin4.value(true);
         res.send("Down on\n");
         setTimeout(function() { http.get("http://localhost:7777/space"); }, 3000);
-        clearTimeout(v1);
         res.end();
     });
     server.get('/stop', function (req, res) {
